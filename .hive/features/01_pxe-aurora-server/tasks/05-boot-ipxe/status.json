@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "done",
   "origin": "manual",
   "planTitle": "boot-ipxe",
   "dependsOn": [],
@@ -19,5 +19,11 @@
     "files": [
       "tftpboot/boot.ipxe"
     ]
-  }
+  },
+  "baseCommit": "421308cffe732805796b13fa0a463811796b45c9",
+  "schemaVersion": 1,
+  "startedAt": "2026-05-24T23:12:25.721Z",
+  "idempotencyKey": "hive-pxe-aurora-server-05-boot-ipxe-1",
+  "summary": "Created tftpboot/boot.ipxe - iPXE boot menu with 'Instalar Aurora Linux' option, kernel/initrd via HTTP (192.168.200.115:8080), inst.ks pointing to ks.cfg, inst.repo pointing to Fedora 42 mirror, ip=dhcp, and 30s timeout defaulting to auto-install. All 8 acceptance criteria verified via TDD.",
+  "completedAt": "2026-05-24T23:14:33.027Z"
 }

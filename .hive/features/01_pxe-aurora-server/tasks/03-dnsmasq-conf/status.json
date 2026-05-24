@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "done",
   "origin": "manual",
   "planTitle": "dnsmasq-conf",
   "dependsOn": [],
@@ -19,5 +19,11 @@
     "files": [
       "config/dnsmasq.conf"
     ]
-  }
+  },
+  "baseCommit": "421308cffe732805796b13fa0a463811796b45c9",
+  "schemaVersion": 1,
+  "startedAt": "2026-05-24T23:12:24.942Z",
+  "idempotencyKey": "hive-pxe-aurora-server-03-dnsmasq-conf-1",
+  "summary": "Created config/dnsmasq.conf with DHCP+TFTP+iPXE chainloading for BIOS/UEFI. Includes interface=enp3s0 bind-dynamic, DHCP range 192.168.200.150-250/12h, gateway/DNS options, architecture detection via Option 93 (BIOS arch0, UEFI arch7/9), iPXE anti-loop userclass, boot file selection (BIOS→undionly.kpxe, UEFI→ipxe.efi, iPXE→HTTP), and TFTP config. All 16 tests pass including dnsmasq --test syntax validation.",
+  "completedAt": "2026-05-24T23:13:24.400Z"
 }

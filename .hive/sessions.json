@@ -3,7 +3,7 @@
     {
       "sessionId": "ses_1a3ce0d12ffe6qc566B8JIGYPf",
       "startedAt": "2026-05-24T22:53:57.933Z",
-      "lastActiveAt": "2026-05-24T23:10:00.485Z",
+      "lastActiveAt": "2026-05-24T23:30:16.192Z",
       "agent": "Sisyphus - ultraworker",
       "sessionKind": "unknown"
     },
@@ -27,6 +27,94 @@
       "lastActiveAt": "2026-05-24T22:55:17.945Z",
       "agent": "librarian",
       "sessionKind": "unknown"
+    },
+    {
+      "sessionId": "ses_1a3bd01bbffeARoswR2zJMr6wZ",
+      "startedAt": "2026-05-24T23:12:34.918Z",
+      "lastActiveAt": "2026-05-24T23:14:05.732Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "01_pxe-aurora-server",
+      "taskFolder": "01-containerfile",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/01-containerfile/worker-prompt.md"
+    },
+    {
+      "sessionId": "ses_1a3bcfe93ffeBxpef48s9BHE6c",
+      "startedAt": "2026-05-24T23:12:35.709Z",
+      "lastActiveAt": "2026-05-24T23:14:55.283Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "pxe-aurora-server",
+      "taskFolder": "02-entrypoint",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/02-entrypoint/worker-prompt.md"
+    },
+    {
+      "sessionId": "ses_1a3bcf9ddffeZ9tsMGwn1AiSlc",
+      "startedAt": "2026-05-24T23:12:36.915Z",
+      "lastActiveAt": "2026-05-24T23:13:24.251Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "pxe-aurora-server",
+      "taskFolder": "03-dnsmasq-conf",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/03-dnsmasq-conf/worker-prompt.md"
+    },
+    {
+      "sessionId": "ses_1a3bcf53bffelvblzeGSZ5NLVA",
+      "startedAt": "2026-05-24T23:12:38.101Z",
+      "lastActiveAt": "2026-05-24T23:13:41.327Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "pxe-aurora-server",
+      "taskFolder": "04-nginx-conf",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/04-nginx-conf/worker-prompt.md"
+    },
+    {
+      "sessionId": "ses_1a3bcf1f2ffeKxEJH1eGkqJbwg",
+      "startedAt": "2026-05-24T23:12:38.950Z",
+      "lastActiveAt": "2026-05-24T23:14:39.985Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "01_pxe-aurora-server",
+      "taskFolder": "05-boot-ipxe",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/05-boot-ipxe/worker-prompt.md"
+    },
+    {
+      "sessionId": "ses_1a3bc32c9ffeMNkt1BCKc06zR2",
+      "startedAt": "2026-05-24T23:13:27.895Z",
+      "lastActiveAt": "2026-05-24T23:15:03.878Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "pxe-aurora-server",
+      "taskFolder": "06-kickstart",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/06-kickstart/worker-prompt.md"
+    },
+    {
+      "sessionId": "ses_1a3bbdd74ffeTRxrf3dPAmfvU5",
+      "startedAt": "2026-05-24T23:13:49.747Z",
+      "lastActiveAt": "2026-05-24T23:14:16.784Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "pxe-aurora-server",
+      "taskFolder": "07-compose",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/07-compose/worker-prompt.md"
+    },
+    {
+      "sessionId": "ses_1a3ba097effecoFwtKcmEmPNSa",
+      "startedAt": "2026-05-24T23:15:49.524Z",
+      "lastActiveAt": "2026-05-24T23:17:00.760Z",
+      "agent": "forager-worker",
+      "sessionKind": "task-worker",
+      "baseAgent": "forager-worker",
+      "featureName": "pxe-aurora-server",
+      "taskFolder": "08-readme",
+      "workerPromptPath": ".hive/features/01_pxe-aurora-server/tasks/08-readme/worker-prompt.md"
     }
   ]
 }

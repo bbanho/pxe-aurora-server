@@ -18,7 +18,7 @@ Servidor PXE all-in-one para instalação automatizada do [Aurora Linux](https:/
 │  │   request    │      │  │  • TFTP        │  │  • boot.ipxe  │  │  │
 │  │              │      │  │  • undionly    │  │  • vmlinuz    │  │  │
 │  │  2. TFTP     │◄─────│  │    .kpxe(BIOS) │  │  • initrd.img │  │  │
-│  │   bootloader │      │  │  • ipxe.efi    │  │  • ks.cfg     │  │  │
+│  │   bootloader │      │  │  • shimx64.efi │  │  • ks.cfg     │  │  │
 │  │              │      │  │    (UEFI)      │  └──────────────┘  │  │
 │  │  3. HTTP     │◄─────│  └──────────────┘                       │  │
 │  │   menu iPXE  │      │                                         │  │
@@ -38,7 +38,7 @@ Servidor PXE all-in-one para instalação automatizada do [Aurora Linux](https:/
 1. **DHCP Discovery** — Cliente envia broadcast DHCP; dnsmasq responde com IP, gateway e servidor TFTP
 2. **TFTP Bootloader** — Arquitetura detectada via DHCP Option 93:
    - BIOS → `undionly.kpxe`
-   - UEFI → `ipxe.efi`
+   - UEFI → `shimx64.efi`
 3. **iPXE → HTTP** — iPXE carrega `boot.ipxe` via HTTP em `:8080`, exibindo menu interativo
 4. **Anaconda** — vmlinuz + initrd.img (Fedora 42) baixados via HTTP; instalação lê `ks.cfg`
 5. **Aurora** — Kickstart executa `ostreecontainer --url ghcr.io/ublue-os/aurora:latest` e instala o sistema
@@ -110,7 +110,7 @@ podman-compose build
 ```
 
 Isso baixa na build:
-- `/tftpboot/undionly.kpxe` e `/tftpboot/ipxe.efi` (bootloaders iPXE)
+- `/tftpboot/undionly.kpxe` e `/tftpboot/shimx64.efi` (bootloaders iPXE)
 - `/tftpboot/vmlinuz` e `/tftpboot/initrd.img` (Fedora 42 pxeboot)
 
 ### 2. Iniciar o servidor
@@ -205,7 +205,7 @@ pxe/
     ├── boot.ipxe               # Menu PXE
     ├── ks.cfg                  # Kickstart Aurora
     ├── undionly.kpxe           # Bootloader BIOS (iPXE)
-    ├── ipxe.efi                # Bootloader UEFI (iPXE)
+    ├── shimx64.efi                # Bootloader UEFI (iPXE shim)
     ├── vmlinuz                 # Kernel Fedora 42
     └── initrd.img              # Initramfs Fedora 42
 ```
@@ -231,7 +231,7 @@ pxe/
 │   ├── boot.ipxe              # Menu iPXE
 │   ├── ks.cfg                 # Kickstart Aurora Linux
 │   ├── undionly.kpxe          # Bootloader BIOS
-│   ├── ipxe.efi               # Bootloader UEFI
+│       ├── shimx64.efi               # Bootloader UEFI
 │   ├── vmlinuz                # Kernel Fedora 42
 │   └── initrd.img             # Initramfs Fedora 42
 └── test_*.sh                  # Testes de validação
@@ -243,7 +243,7 @@ pxe/
 
 **Sintoma:** O cliente PXE baixa o bootloader, carrega o menu iPXE, mas volta ao início do ciclo infinitamente.
 
-**Causa mais comum:** O dnsmasq está servindo o bootloader iPXE novamente após o cliente já estar rodando iPXE — o cliente pede DHCP de novo e recebe `undionly.kpxe`/`ipxe.efi` em vez do próximo estágio HTTP.
+**Causa mais comum:** O dnsmasq está servindo o bootloader iPXE novamente após o cliente já estar rodando iPXE — o cliente pede DHCP de novo e recebe `undionly.kpxe`/`shimx64.efi` em vez do próximo estágio HTTP.
 
 **Solução:** A configuração já inclui detecção anti-loop via `dhcp-userclass`:
 
@@ -382,7 +382,7 @@ podman exec pxe-server curl -s -o /dev/null -w "%{http_code}" \
 
 ```bash
 # Confira se os bootloaders foram baixados na build
-ls -la tftpboot/undionly.kpxe tftpboot/ipxe.efi
+ls -la tftpboot/undionly.kpxe tftpboot/shimx64.efi
 
 # Verifique permissões
 ls -la tftpboot/

@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "done",
   "origin": "manual",
   "planTitle": "containerfile",
   "dependsOn": [],
@@ -17,5 +17,11 @@
     "files": [
       "Containerfile"
     ]
-  }
+  },
+  "baseCommit": "421308cffe732805796b13fa0a463811796b45c9",
+  "schemaVersion": 1,
+  "startedAt": "2026-05-24T23:12:23.781Z",
+  "idempotencyKey": "hive-pxe-aurora-server-01-containerfile-1",
+  "summary": "Created Containerfile: Alpine 3.20-based, installs dnsmasq + nginx + curl, downloads undionly.kpxe + ipxe.efi from boot.ipxe.org and vmlinuz + initrd.img from Fedora 42 pxeboot during build, ENTRYPOINT /entrypoint.sh, assets to /tftpboot/. Verified with 9/9 tests passing. Commit: 372bf6f.",
+  "completedAt": "2026-05-24T23:13:59.028Z"
 }

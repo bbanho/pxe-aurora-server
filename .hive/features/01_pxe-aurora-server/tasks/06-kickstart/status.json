@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "done",
   "origin": "manual",
   "planTitle": "kickstart",
   "dependsOn": [],
@@ -23,5 +23,11 @@
     "files": [
       "tftpboot/ks.cfg"
     ]
-  }
+  },
+  "baseCommit": "421308cffe732805796b13fa0a463811796b45c9",
+  "schemaVersion": 1,
+  "startedAt": "2026-05-24T23:12:27.383Z",
+  "idempotencyKey": "hive-pxe-aurora-server-06-kickstart-1",
+  "summary": "Created tftpboot/ks.cfg with fully automated Aurora Linux kickstart (text mode, pt_BR, br-abnt2, GPT partitioning, ostreecontainer Aurora, user aurora in wheel, reboot --eject) and test_ks_cfg.sh validation script. All 18 tests pass.",
+  "completedAt": "2026-05-24T23:14:58.146Z"
 }

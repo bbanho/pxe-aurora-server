@@ -1,8 +1,9 @@
 {
   "name": "pxe-aurora-server",
-  "status": "executing",
+  "status": "completed",
   "ticket": "PXE boot server container para instalar Aurora Universal Blue via LAN",
   "createdAt": "2026-05-24T23:10:17.102Z",
-  "sessionId": "ses_1a3ce0d12ffe6qc566B8JIGYPf",
-  "approvedAt": "2026-05-24T23:11:06.060Z"
+  "sessionId": "ses_1a3bbdd74ffeTRxrf3dPAmfvU5",
+  "approvedAt": "2026-05-24T23:11:06.060Z",
+  "completedAt": "2026-05-24T23:17:25.563Z"
 }

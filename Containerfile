@@ -7,8 +7,9 @@ RUN apk add --no-cache dnsmasq nginx curl
 RUN mkdir -p /tftpboot /etc/nginx
 
 # Download iPXE bootloaders
+# undionly.kpxe: BIOS chainloader; shimx64.efi: UEFI shim (replaces ipxe.efi, removed upstream)
 RUN curl -fsSL -o /tftpboot/undionly.kpxe https://boot.ipxe.org/undionly.kpxe \
-    && curl -fsSL -o /tftpboot/ipxe.efi https://boot.ipxe.org/ipxe.efi
+    && curl -fsSL -o /tftpboot/shimx64.efi https://boot.ipxe.org/shimx64.efi
 
 # Download Fedora 42 pxeboot assets
 RUN curl -fsSL -o /tftpboot/vmlinuz \

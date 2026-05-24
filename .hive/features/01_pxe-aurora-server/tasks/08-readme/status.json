@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "done",
   "origin": "manual",
   "planTitle": "readme",
   "dependsOn": [],
@@ -18,5 +18,11 @@
     "files": [
       "README.md"
     ]
-  }
+  },
+  "baseCommit": "bd1aa7dbfd07f5f9dff55622c9b1b74f8c660d5e",
+  "schemaVersion": 1,
+  "startedAt": "2026-05-24T23:15:44.812Z",
+  "idempotencyKey": "hive-pxe-aurora-server-08-readme-1",
+  "summary": "Created comprehensive README.md (395 lines) covering architecture diagram, prerequisites (podman, podman-compose, firewall ports), build/start/stop commands, log viewing, customization (interface, DHCP range, gateway, DNS, passwords), file structure, and troubleshooting (iPXE loop, DHCP conflict, SELinux, firewall, bootloader missing, installation failures). All 11 acceptance criteria met. Entrypoint and nginx tests pass (10/10, 8/8) - no regressions.",
+  "completedAt": "2026-05-24T23:17:00.901Z"
 }

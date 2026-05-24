@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "done",
   "origin": "manual",
   "planTitle": "entrypoint",
   "dependsOn": [],
@@ -16,5 +16,11 @@
     "files": [
       "entrypoint.sh"
     ]
-  }
+  },
+  "baseCommit": "421308cffe732805796b13fa0a463811796b45c9",
+  "schemaVersion": 1,
+  "startedAt": "2026-05-24T23:12:24.503Z",
+  "idempotencyKey": "hive-pxe-aurora-server-02-entrypoint-1",
+  "summary": "Created entrypoint.sh (chmod +x) with nginx background, dnsmasq foreground, SIGTERM/SIGINT trap for graceful shutdown, and exit code propagation. Includes test_entrypoint.sh with 10 assertions (all pass). Syntax validated with bash -n and sh -n.",
+  "completedAt": "2026-05-24T23:14:49.595Z"
 }

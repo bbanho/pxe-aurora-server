@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "done",
   "origin": "manual",
   "planTitle": "nginx-conf",
   "dependsOn": [],
@@ -16,5 +16,11 @@
     "files": [
       "config/nginx.conf"
     ]
-  }
+  },
+  "baseCommit": "421308cffe732805796b13fa0a463811796b45c9",
+  "schemaVersion": 1,
+  "startedAt": "2026-05-24T23:12:25.343Z",
+  "idempotencyKey": "hive-pxe-aurora-server-04-nginx-conf-1",
+  "summary": "Created config/nginx.conf with HTTP server on port 8080 serving /tftpboot with autoindex, sendfile, and correct MIME types for PXE binaries (application/octet-stream). All acceptance criteria verified via test script.",
+  "completedAt": "2026-05-24T23:13:35.459Z"
 }
