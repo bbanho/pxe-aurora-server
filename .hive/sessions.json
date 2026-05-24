@@ -1,0 +1,32 @@
+{
+  "sessions": [
+    {
+      "sessionId": "ses_1a3ce0d12ffe6qc566B8JIGYPf",
+      "startedAt": "2026-05-24T22:53:57.933Z",
+      "lastActiveAt": "2026-05-24T23:10:00.485Z",
+      "agent": "Sisyphus - ultraworker",
+      "sessionKind": "unknown"
+    },
+    {
+      "sessionId": "ses_1a3cd199bffeYvEWAeATEj1Idw",
+      "startedAt": "2026-05-24T22:55:00.226Z",
+      "lastActiveAt": "2026-05-24T22:55:00.226Z",
+      "agent": "librarian",
+      "sessionKind": "unknown"
+    },
+    {
+      "sessionId": "ses_1a3cced02ffeoHTQbW5FaVPVZw",
+      "startedAt": "2026-05-24T22:55:11.639Z",
+      "lastActiveAt": "2026-05-24T22:55:11.639Z",
+      "agent": "librarian",
+      "sessionKind": "unknown"
+    },
+    {
+      "sessionId": "ses_1a3ccd45fffeE5xuDiq7R5OEGl",
+      "startedAt": "2026-05-24T22:55:17.945Z",
+      "lastActiveAt": "2026-05-24T22:55:17.945Z",
+      "agent": "librarian",
+      "sessionKind": "unknown"
+    }
+  ]
+}

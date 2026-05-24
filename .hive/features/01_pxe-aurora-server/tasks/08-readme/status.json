@@ -1,0 +1,22 @@
+{
+  "status": "pending",
+  "origin": "manual",
+  "planTitle": "readme",
+  "dependsOn": [],
+  "metadata": {
+    "description": "Criar README.md com: visão geral da arquitetura, pré-requisitos (podman, podman-compose, firewall), como buildar, como iniciar/parar, como verificar logs, como customizar (senha, usuário, range DHCP, interface), troubleshooting comum.",
+    "goal": "Documentação completa de uso, pré-requisitos, operação e troubleshooting",
+    "acceptanceCriteria": [
+      "Diagrama ASCII da arquitetura",
+      "Pré-requisitos listados (podman, podman-compose, portas firewall)",
+      "Comandos build e start claros",
+      "Como ver logs (podman logs -f)",
+      "Como parar (podman-compose down)",
+      "Seção de customização (variáveis editáveis)",
+      "Troubleshooting: iPXE loop, DHCP conflict, SELinux, firewall"
+    ],
+    "files": [
+      "README.md"
+    ]
+  }
+}

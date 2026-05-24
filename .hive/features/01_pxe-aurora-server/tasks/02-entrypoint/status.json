@@ -1,0 +1,20 @@
+{
+  "status": "pending",
+  "origin": "manual",
+  "planTitle": "entrypoint",
+  "dependsOn": [],
+  "metadata": {
+    "description": "Criar entrypoint.sh que inicia nginx em background e dnsmasq em foreground com tratamento correto de sinais SIGTERM/SIGINT para graceful shutdown.",
+    "goal": "Script de inicialização do container all-in-one com gestão correta de processos",
+    "acceptanceCriteria": [
+      "entrypoint.sh existe e tem chmod +x",
+      "nginx inicia em background",
+      "dnsmasq inicia em foreground (mantém container vivo)",
+      "trap SIGTERM/SIGINT para matar ambos os processos",
+      "Exit code propagado corretamente"
+    ],
+    "files": [
+      "entrypoint.sh"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "pending",
+  "origin": "manual",
+  "planTitle": "nginx-conf",
+  "dependsOn": [],
+  "metadata": {
+    "description": "Criar config/nginx.conf com HTTP server na porta 8080 servindo o diretório /tftpboot com autoindex habilitado e mime types corretos para servir binários PXE.",
+    "goal": "nginx HTTP server na porta 8080 para servir assets PXE (vmlinuz, initrd, ipxe scripts, kickstart)",
+    "acceptanceCriteria": [
+      "listen 8080",
+      "root /tftpboot",
+      "autoindex on",
+      "mime types incluem application/octet-stream para binários",
+      "sendfile on para performance"
+    ],
+    "files": [
+      "config/nginx.conf"
+    ]
+  }
+}

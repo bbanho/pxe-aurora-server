@@ -1,0 +1,28 @@
+# Task: 01-containerfile
+
+## Feature: pxe-aurora-server
+
+## Dependencies
+
+_None_
+
+## Goal
+
+Criar Containerfile Alpine all-in-one com dnsmasq + nginx + assets PXE baixados na build
+
+## Description
+
+Criar o Containerfile base do projeto. Alpine Linux com dnsmasq, nginx, curl. Downloads na build: undionly.kpxe e ipxe.efi de boot.ipxe.org, vmlinuz e initrd.img do Fedora 42 pxeboot. ENTRYPOINT aponta para /entrypoint.sh.
+
+## Acceptance Criteria
+
+- Containerfile existe em /var/home/bruno/Documentos/workspace/pxe/Containerfile
+- Alpine-based, instala dnsmasq nginx curl
+- Baixa undionly.kpxe e ipxe.efi de boot.ipxe.org na build
+- Baixa vmlinuz e initrd.img do Fedora 42 pxeboot na build
+- ENTRYPOINT é /entrypoint.sh
+- Assets copiados para /tftpboot/
+
+## Files
+
+- Containerfile
