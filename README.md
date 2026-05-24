@@ -288,7 +288,8 @@ As montagens no `compose.yaml` já incluem `:z` para auto-labeling SELinux:
 volumes:
   - ./config/dnsmasq.conf:/etc/dnsmasq.conf:ro,z
   - ./config/nginx.conf:/etc/nginx/nginx.conf:ro,z
-  - ./tftpboot:/tftpboot:ro,z
+  - ./tftpboot/boot.ipxe:/tftpboot/boot.ipxe:ro,z
+  - ./tftpboot/ks.cfg:/tftpboot/ks.cfg:ro,z
 ```
 
 Se o problema persistir, verifique o contexto SELinux:

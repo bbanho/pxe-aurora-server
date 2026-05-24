@@ -5,8 +5,10 @@ services:
     network_mode: host
     cap_add:
       - NET_ADMIN
+      - NET_RAW
     volumes:
       - ./config/dnsmasq.conf:/etc/dnsmasq.conf:ro,z
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro,z
-      - ./tftpboot:/tftpboot:ro,z
+      - ./tftpboot/boot.ipxe:/tftpboot/boot.ipxe:ro,z
+      - ./tftpboot/ks.cfg:/tftpboot/ks.cfg:ro,z
     restart: unless-stopped
