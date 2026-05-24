@@ -1,0 +1,19 @@
+#!ipxe
+
+:menu
+menu PXE Boot Server
+item --key i install_aurora   Instalar Aurora Linux
+item --key s shell            Ir para shell iPXE
+item --key r reboot           Reiniciar
+choose --timeout 30000 --default install_aurora target && goto ${target}
+
+:install_aurora
+kernel http://192.168.200.115:8080/vmlinuz inst.ks=http://192.168.200.115:8080/ks.cfg inst.repo=https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Everything/x86_64/os/ ip=dhcp quiet
+initrd http://192.168.200.115:8080/initrd.img
+boot
+
+:shell
+shell
+
+:reboot
+reboot
